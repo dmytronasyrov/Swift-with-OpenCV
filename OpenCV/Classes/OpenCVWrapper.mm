@@ -6,18 +6,30 @@
 //  Copyright © 2017 Pharos Production Inc. All rights reserved.
 //
 
+#ifdef __cplusplus
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdocumentation"
+
 #import <opencv2/opencv.hpp>
 #import "OpenCVWrapper.h"
 
+#pragma clang pop
+#endif
+
+using namespace std;
 using namespace cv;
 
 #pragma mark - Private Declarations
 
 @interface OpenCVWrapper ()
 
+#ifdef __cplusplus
+
 + (Mat)_grayFrom:(Mat)source;
 + (Mat)_matFrom:(UIImage *)source;
 + (UIImage *)_imageFrom:(Mat)source;
+
+#endif
 
 @end
 
@@ -28,14 +40,14 @@ using namespace cv;
 #pragma mark Public
 
 + (UIImage *)toGray:(UIImage *)source {
-    std::cout << "OpenCV: ";
+    cout << "OpenCV: ";
     return [OpenCVWrapper _imageFrom:[OpenCVWrapper _grayFrom:[OpenCVWrapper _matFrom:source]]];
 }
 
 #pragma mark Private
 
 + (Mat)_grayFrom:(Mat)source {
-    std::cout << "-> grayFrom ->";
+    cout << "-> grayFrom ->";
     
     Mat result;
     cvtColor(source, result, CV_BGR2GRAY);
@@ -44,7 +56,7 @@ using namespace cv;
 }
 
 + (Mat)_matFrom:(UIImage *)source {
-    std::cout << "matFrom ->";
+    cout << "matFrom ->";
     
     CGImageRef image = CGImageCreateCopy(source.CGImage);
     CGFloat cols = CGImageGetWidth(image);
@@ -64,7 +76,7 @@ using namespace cv;
 }
 
 + (UIImage *)_imageFrom:(Mat)source {
-    std::cout << "-> imageFrom\n";
+    cout << "-> imageFrom\n";
     
     NSData *data = [NSData dataWithBytes:source.data length:source.elemSize() * source.total()];
     CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
