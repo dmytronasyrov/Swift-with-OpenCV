@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176F63BE1EB73FE000E86937 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176F63BD1EB73FE000E86937 /* CameraController.swift */; };
 		17769AEE1EB69B86004C3F13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17769AED1EB69B86004C3F13 /* AppDelegate.swift */; };
 		17769AF51EB69B86004C3F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17769AF41EB69B86004C3F13 /* Assets.xcassets */; };
 		17769AF81EB69B86004C3F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17769AF61EB69B86004C3F13 /* LaunchScreen.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		176F63BD1EB73FE000E86937 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		17769AEA1EB69B86004C3F13 /* OpenCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17769AED1EB69B86004C3F13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17769AF41EB69B86004C3F13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				17769B011EB69C15004C3F13 /* ImageController.swift */,
+				176F63BD1EB73FE000E86937 /* CameraController.swift */,
 				17769B081EB69CA8004C3F13 /* OpenCVWrapper.h */,
 				17769B091EB69CA8004C3F13 /* OpenCVWrapper.mm */,
 			);
@@ -179,6 +182,7 @@
 			files = (
 				17769AEE1EB69B86004C3F13 /* AppDelegate.swift in Sources */,
 				17769B021EB69C15004C3F13 /* ImageController.swift in Sources */,
+				176F63BE1EB73FE000E86937 /* CameraController.swift in Sources */,
 				17769B0A1EB69CA8004C3F13 /* OpenCVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
