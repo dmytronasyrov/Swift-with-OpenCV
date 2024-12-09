@@ -1,5 +1,5 @@
 //
-//  OpenCVWrapper.m
+//  OpenCVWrapper.mm
 //  OpenCV
 //
 //  Created by Dmytro Nasyrov on 5/1/17.
@@ -71,6 +71,7 @@ using namespace cv;
     CGContextRef context = CGBitmapContextCreate(result.data, cols, rows, bitsPerComponent, bytesPerRow, colorSpace, bitmapFlags);
     CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, cols, rows), image);
     CGContextRelease(context);
+    CGImageRelease(image);
     
     return result;
 }
